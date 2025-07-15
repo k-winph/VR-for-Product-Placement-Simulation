@@ -3,7 +3,17 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - cola
+  - water
+  - Connectable
+  - Laundry_Detergent
+  - Dishwashing_Liquid
+  - Mama(pack)
+  - Fish_Sauce
+  - Ketchup
+  - Crisps
+  - Cookie
   layers:
   - Default
   - TransparentFX
