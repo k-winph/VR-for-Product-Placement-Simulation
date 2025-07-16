@@ -391,6 +391,7 @@
 "Assets/ModularFirstPersonController/FirstPersonController/FirstPersonController.cs"
 "Assets/Script/BasketTrigger.cs"
 "Assets/Script/DisconnectOnGrab.cs"
+"Assets/Script/ForceGrabForever.cs"
 "Assets/Script/ObjectConnector.cs"
 "Assets/Script/ScoreManager.cs"
 "Assets/Script/SocketChecker.cs"
