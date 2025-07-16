@@ -20,7 +20,6 @@ public class DisconnectOnGrab : MonoBehaviour
 
     private void OnGrab(SelectEnterEventArgs args)
     {
-        // แยกออกจาก A
         transform.SetParent(null);
 
         Rigidbody rb = GetComponent<Rigidbody>();
@@ -29,6 +28,6 @@ public class DisconnectOnGrab : MonoBehaviour
             rb.isKinematic = false;
         }
 
-        Debug.Log($"{gameObject.name} ถูกแยกออกจากวัตถุหลัก");
+        Debug.Log($"{gameObject.name} out of main object");
     }
 }

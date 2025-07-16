@@ -24,7 +24,6 @@ public class ScoreManager : MonoBehaviour
             }
         }
 
-        Debug.Log("คะแนนทั้งหมด: " + totalScore);
-        // คุณสามารถแสดงคะแนนบน UI ตรงนี้ได้เช่นกัน
+        Debug.Log("Total score: " + totalScore);
     }
 }

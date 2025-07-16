@@ -5,7 +5,6 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class ObjectConnector : MonoBehaviour
 {
-    [Tooltip("Tag ของวัตถุเป้าหมายที่จะเชื่อมต่อด้วย เช่น 'Connectable'")]
     public string targetTag = "Connectable";
 
     private bool isConnected = false;
@@ -16,7 +15,6 @@ public class ObjectConnector : MonoBehaviour
 
         if (collision.gameObject.CompareTag(targetTag))
         {
-            // รอจนกว่าผู้เล่นจะปล่อยมือก่อนค่อยเชื่อม
             XRGrabInteractable grab = GetComponent<XRGrabInteractable>();
             if (grab != null)
             {
@@ -29,10 +27,8 @@ public class ObjectConnector : MonoBehaviour
     {
         yield return new WaitUntil(() => !grab.isSelected);
 
-        // เชื่อมต่อกับ A
         transform.SetParent(parent);
 
-        // ปิด Rigidbody เพื่อให้ติดแน่น
         Rigidbody rb = GetComponent<Rigidbody>();
         if (rb != null)
         {
@@ -42,6 +38,6 @@ public class ObjectConnector : MonoBehaviour
         }
 
         isConnected = true;
-        Debug.Log($"{gameObject.name} เชื่อมกับ {parent.name}");
+        Debug.Log($"{gameObject.name} join {parent.name}");
     }
 }

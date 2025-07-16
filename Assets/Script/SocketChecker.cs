@@ -6,14 +6,14 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class SocketChecker : MonoBehaviour
 {
-    public string correctTag = ""; // Tag ที่ถูกต้อง
+    public string correctTag = "";
     private XRSocketInteractor socket;
 
     private void Awake()
     {
         socket = GetComponent<XRSocketInteractor>();
-        socket.selectEntered.AddListener(OnItemPlaced); // เพิ่ม Listener สำหรับวางของ
-        ScoreManager.RegisterSocket(this); // ลงทะเบียนกับ ScoreManager
+        socket.selectEntered.AddListener(OnItemPlaced);
+        ScoreManager.RegisterSocket(this);
     }
 
     private void OnDestroy()

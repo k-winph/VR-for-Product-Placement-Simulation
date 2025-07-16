@@ -17,13 +17,10 @@ public class BasketTrigger : MonoBehaviour
 
     private IEnumerator WaitUntilReleasedAndAddToBasket(XRGrabInteractable grab)
     {
-        // รอจนกว่าผู้เล่นจะปล่อยวัตถุ
         yield return new WaitUntil(() => !grab.isSelected);
 
-        // ย้ายเข้าเป็นลูกของตะกร้า
         grab.transform.SetParent(itemContainer);
 
-        // ปิดฟิสิกส์ให้ติดกับตะกร้า
         Rigidbody rb = grab.GetComponent<Rigidbody>();
         if (rb != null)
         {
@@ -32,10 +29,8 @@ public class BasketTrigger : MonoBehaviour
             rb.angularVelocity = Vector3.zero;
         }
 
-        // ปิดการจับซ้ำในทันที (ถ้าต้องการ)
-        // grab.enabled = false;
 
-        Debug.Log("ของถูกใส่ตะกร้า: " + grab.name);
+        Debug.Log("Object put in Basket: " + grab.name);
     }
 
     private void OnTriggerExit(Collider other)
@@ -51,7 +46,7 @@ public class BasketTrigger : MonoBehaviour
                 rb.isKinematic = false;
             }
 
-            Debug.Log("ของถูกหยิบออกจากตะกร้า: " + grab.name);
+            Debug.Log("Object out Basket: " + grab.name);
         }
     }
 }
