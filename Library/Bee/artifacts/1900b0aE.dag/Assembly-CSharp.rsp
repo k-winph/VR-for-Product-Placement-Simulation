@@ -394,6 +394,7 @@
 "Assets/Script/ForceGrabForever.cs"
 "Assets/Script/ObjectConnector.cs"
 "Assets/Script/ScoreManager.cs"
+"Assets/Script/ScoreUIUpdater.cs"
 "Assets/Script/SocketChecker.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01_UGUI.cs"

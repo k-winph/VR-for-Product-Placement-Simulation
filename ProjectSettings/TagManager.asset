@@ -19,6 +19,13 @@ TagManager:
   - Liqueur
   - Paper
   - Pen
+  - Para
+  - Chocolate
+  - Chewing_gum
+  - Cola(can)
+  - Milk
+  - Beer(can)
+  - Beer(bottle)
   layers:
   - Default
   - TransparentFX

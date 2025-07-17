@@ -6,7 +6,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class SocketChecker : MonoBehaviour
 {
-    public string correctTag = "";
+    public List<string> correctTags = new List<string>();
     private XRSocketInteractor socket;
 
     private void Awake()
@@ -26,7 +26,7 @@ public class SocketChecker : MonoBehaviour
     {
         GameObject placedObj = args.interactableObject.transform.gameObject;
 
-        if (placedObj.CompareTag(correctTag))
+        if (correctTags.Contains(placedObj.tag))
         {
             Debug.Log("correct");
         }
@@ -41,7 +41,7 @@ public class SocketChecker : MonoBehaviour
         if (socket.hasSelection)
         {
             GameObject placedObj = socket.GetOldestInteractableSelected().transform.gameObject;
-            return placedObj.CompareTag(correctTag);
+            return correctTags.Contains(placedObj.tag);
         }
 
         return false;
