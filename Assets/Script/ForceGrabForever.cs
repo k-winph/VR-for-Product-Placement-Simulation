@@ -7,6 +7,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class ForceGrabForever : MonoBehaviour
 {
     private XRGrabInteractable grabInteractable;
+    private IXRSelectInteractor currentInteractor = null;
 
     private void Awake()
     {
@@ -16,15 +17,36 @@ public class ForceGrabForever : MonoBehaviour
         grabInteractable.trackPosition = true;
         grabInteractable.trackRotation = true;
 
-        grabInteractable.selectExited.AddListener(PreventRelease);
+        grabInteractable.selectEntered.AddListener(OnSelectEntered);
+        grabInteractable.selectExited.AddListener(OnSelectExited);
     }
 
-    private void PreventRelease(SelectExitEventArgs args)
+    private void OnSelectEntered(SelectEnterEventArgs args)
     {
-        XRBaseInteractor interactor = args.interactorObject as XRBaseInteractor;
-        if (interactor != null)
+        if (currentInteractor == null)
         {
-            interactor.interactionManager.SelectEnter(interactor, grabInteractable);
+            currentInteractor = args.interactorObject;
+        }
+        else if (currentInteractor != args.interactorObject)
+        {
+            XRBaseInteractor interactor = args.interactorObject as XRBaseInteractor;
+            if (interactor != null)
+            {
+                interactor.interactionManager.SelectExit(interactor, grabInteractable);
+            }
+        }
+    }
+
+    private void OnSelectExited(SelectExitEventArgs args)
+    {
+        if (args.interactorObject == currentInteractor)
+        {
+            XRBaseInteractor interactor = args.interactorObject as XRBaseInteractor;
+            if (interactor != null)
+            {
+                interactor.interactionManager.SelectEnter(interactor, grabInteractable);
+            }
+            currentInteractor = null;
         }
     }
 }
