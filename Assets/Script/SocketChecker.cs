@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.XR.Interaction.Toolkit;
 
 public class SocketChecker : MonoBehaviour
 {
-    public List<string> correctTags = new List<string>();
+    public List<string> fullyCorrectTags = new List<string>();
+
+    public List<string> semiCorrectTags = new List<string>();
+
     private XRSocketInteractor socket;
 
     private void Awake()
@@ -25,25 +27,35 @@ public class SocketChecker : MonoBehaviour
     private void OnItemPlaced(SelectEnterEventArgs args)
     {
         GameObject placedObj = args.interactableObject.transform.gameObject;
+        string tag = placedObj.tag;
 
-        if (correctTags.Contains(placedObj.tag))
+        if (fullyCorrectTags.Contains(tag))
         {
-            Debug.Log("correct");
+            Debug.Log("Fully correct (2 points)");
+        }
+        else if (semiCorrectTags.Contains(tag))
+        {
+            Debug.Log("Semi correct (1 point)");
         }
         else
         {
-            Debug.Log("incorrect");
+            Debug.Log("Incorrect (0 points)");
         }
     }
 
-    public bool IsCorrect()
+    public int GetScore()
     {
         if (socket.hasSelection)
         {
             GameObject placedObj = socket.GetOldestInteractableSelected().transform.gameObject;
-            return correctTags.Contains(placedObj.tag);
+            string tag = placedObj.tag;
+
+            if (fullyCorrectTags.Contains(tag))
+                return 2;
+            else if (semiCorrectTags.Contains(tag))
+                return 1;
         }
 
-        return false;
+        return 0;
     }
 }

@@ -40,4 +40,10 @@ public class ObjectConnector : MonoBehaviour
         isConnected = true;
         Debug.Log($"{gameObject.name} join {parent.name}");
     }
+
+    public void ResetConnection()
+    {
+        isConnected = false;
+    }
+
 }

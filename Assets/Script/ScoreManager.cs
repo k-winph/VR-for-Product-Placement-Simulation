@@ -18,10 +18,7 @@ public class ScoreManager : MonoBehaviour
 
         foreach (SocketChecker socket in allSockets)
         {
-            if (socket.IsCorrect())
-            {
-                totalScore++;
-            }
+            totalScore += socket.GetScore();
         }
 
         Debug.Log("Total score: " + totalScore);
