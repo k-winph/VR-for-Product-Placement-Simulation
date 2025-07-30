@@ -26,6 +26,33 @@ TagManager:
   - Milk
   - Beer(can)
   - Beer(bottle)
+  - Beer
+  - Battery
+  - Inhaler
+  - Cleansing_Foam
+  - Sunscreen
+  - Toothpaste
+  - Donut
+  - Mosquito_Repellent
+  - Tissue
+  - Shower_Cream
+  - Sandwich
+  - liqueur(2)
+  - Sugar
+  - Tissue(box)
+  - Shampoo
+  - Hand_Washing
+  - Condom
+  - Sachet_Cream
+  - Croissant
+  - rice porridge
+  - coffee
+  - Energy drinks
+  - Soju
+  - cornflakes
+  - eraser
+  - Glue
+  - Lozenge
   layers:
   - Default
   - TransparentFX
