@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/V0_2.unity
-    guid: 7971e341249ba5c4c869474b0ec17490
+    path: Assets/VR for Product Placement Simulation.unity
+    guid: 8fef2e669b630b941a13bf033ed7b1de
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 25711a17da261894ca479d89daf9bf9d, type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: ae4159ff007eade48b10dde8c930415d, type: 2}

@@ -8756,7 +8756,7 @@ Transform:
   m_GameObject: {fileID: 201564668}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.521, y: -0.002, z: 1.147}
+  m_LocalPosition: {x: 3.521, y: -0.641, z: 1.147}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -13107,7 +13107,7 @@ MonoBehaviour:
   fullyCorrectTags:
   - liqueur(2)
   semiCorrectTags:
-  - Cigararette
+  - Cigarette
   - Liqueur
 --- !u!114 &322486212
 MonoBehaviour:
@@ -24668,7 +24668,7 @@ MonoBehaviour:
   fullyCorrectTags:
   - liqueur(2)
   semiCorrectTags:
-  - Cigararette
+  - Cigarette
   - Liqueur
 --- !u!114 &663981147
 MonoBehaviour:
@@ -27668,7 +27668,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fullyCorrectTags:
-  - Cigararette
+  - Cigarette
   semiCorrectTags:
   - Liqueur
   - liqueur(2)
@@ -32851,7 +32851,7 @@ MonoBehaviour:
   fullyCorrectTags:
   - liqueur(2)
   semiCorrectTags:
-  - Cigararette
+  - Cigarette
   - Liqueur
 --- !u!114 &867564283
 MonoBehaviour:
@@ -33068,7 +33068,7 @@ Transform:
   m_GameObject: {fileID: 873256714}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.001, y: -0.639, z: 0}
+  m_LocalPosition: {x: -0.001, y: 0.001, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -47975,7 +47975,7 @@ MonoBehaviour:
   fullyCorrectTags:
   - Liqueur
   semiCorrectTags:
-  - Cigararette
+  - Cigarette
   - liqueur(2)
 --- !u!114 &1280262405
 MonoBehaviour:
@@ -55293,7 +55293,7 @@ MonoBehaviour:
   fullyCorrectTags:
   - Liqueur
   semiCorrectTags:
-  - Cigararette
+  - Cigarette
   - liqueur(2)
 --- !u!114 &1473778116
 MonoBehaviour:
@@ -58299,10 +58299,10 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1559460290}
-  - {fileID: 846864617}
-  - {fileID: 2111607159}
-  - {fileID: 2094761667}
   - {fileID: 497542359}
+  - {fileID: 2094761667}
+  - {fileID: 2111607159}
+  - {fileID: 846864617}
   m_Father: {fileID: 110689840}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1562153779 stripped
@@ -63772,7 +63772,7 @@ MonoBehaviour:
   fullyCorrectTags:
   - Liqueur
   semiCorrectTags:
-  - Cigararette
+  - Cigarette
   - liqueur(2)
 --- !u!114 &1701313823
 MonoBehaviour:
@@ -68117,7 +68117,7 @@ MonoBehaviour:
   fullyCorrectTags:
   - liqueur(2)
   semiCorrectTags:
-  - Cigararette
+  - Cigarette
   - Liqueur
 --- !u!114 &1814840263
 MonoBehaviour:
@@ -70716,7 +70716,7 @@ MonoBehaviour:
   fullyCorrectTags:
   - Liqueur
   semiCorrectTags:
-  - Cigararette
+  - Cigarette
   - liqueur(2)
 --- !u!114 &1891338292
 MonoBehaviour:
